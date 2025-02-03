@@ -1,6 +1,6 @@
 import { inject, Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
-import { PostsService } from '../../../services-api/posts.service';
+import { PostsService } from '../services-api/posts.service';
 import { PostsActions } from './posts.actions';
 import { catchError, exhaustMap, map, of, switchMap, tap, withLatestFrom } from 'rxjs';
 import { Store } from '@ngrx/store';
@@ -12,9 +12,6 @@ export class PostsEffects {
   private postsService = inject(PostsService);
   private store = inject(Store);
 
-  constructor() {
-    console.log('here');
-  }
 
   loadPosts$ = createEffect(() => {
     return this.actions$

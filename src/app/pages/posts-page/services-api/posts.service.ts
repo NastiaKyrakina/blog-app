@@ -1,9 +1,9 @@
-import { Post, PostRequests } from '../../models/Post';
+import { Post, PostRequests } from '../../../../models/Post';
 import { HttpClient, HttpHandler, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { HttpRequestService } from './http-request.service';
+import { HttpRequestService } from '../../../core/http-request.service';
 import { Observable } from 'rxjs';
-import { environment } from '../../environments/environment';
+import { environment } from '../../../../environments/environment';
 
 @Injectable()
 export class PostsService extends HttpRequestService {

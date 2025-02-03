@@ -9,7 +9,6 @@ export const PostsActions = createActionGroup({
     'Get Posts Failure': props<{ error: string }>(),
     'Update Search Query': props<{ query: string }>(),
     'Add New Search Query': props<{ query: string }>(),
-    'Update Pagination': props<{ page: number; pageSize: number }>(),
   },
 });
 

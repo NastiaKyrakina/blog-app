@@ -13,12 +13,6 @@ export const selectPosts = createSelector(
   (state: PostsStateType) => state.posts
 );
 
-export const selectQuery = createSelector(
-  selectPostsState,
-  (state: PostsStateType) => state.query
-);
-
-
 export const selectQueryHistory = createSelector(
   selectPostsState,
   (state: PostsStateType) => state.queryHistory

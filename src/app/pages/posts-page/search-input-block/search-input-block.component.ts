@@ -32,7 +32,7 @@ export class SearchInputBlockComponent implements OnInit {
     this.searchControl
       .valueChanges
       .pipe(
-        debounceTime(300),
+        debounceTime(400),
         distinctUntilChanged(),
         takeUntilDestroyed(this.destroyRef)
       ).subscribe(

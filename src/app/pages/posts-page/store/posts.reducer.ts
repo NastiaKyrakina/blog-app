@@ -5,7 +5,6 @@ import { PostsActions } from './posts.actions';
 export type PostsStateType = {
   posts: Post[];
   loading: boolean;
-  query: string;
   queryHistory: string[];
   page: number;
   total: number;
@@ -15,7 +14,6 @@ export type PostsStateType = {
 export const InitPostsState: PostsStateType = {
   posts: [],
   loading: false,
-  query: '',
   queryHistory: [],
   page: 0,
   total: 0,
