@@ -1,0 +1,10 @@
+<input [formControl]="searchControl"
+       id="search-input"
+       class="bg-gray-50 border border-gray-300 py-2 px-1 rounded-md text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+       type="search"
+       placeholder="Search posts by title"
+       list="suggestions">
+<datalist id="suggestions">
+  @for (query of queryHistory(); track $index) {
+    <option [value]="query">{{ query }}</option>}
+</datalist>

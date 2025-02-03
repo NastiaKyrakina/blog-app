@@ -1,0 +1,7 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+:host {
+  @apply block px-20 pt-4 bg-gray-100 m-0 h-screen;
+}
