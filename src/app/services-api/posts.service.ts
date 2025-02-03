@@ -17,7 +17,6 @@ export class PostsService extends HttpRequestService {
   getPosts(params?: PostRequests): Observable<Post[]> {
     return this.http.get<Post[]>(this.url(), this.generateRequestOptions({
       title_like: params?.query || '',
-
   }));
   }
 

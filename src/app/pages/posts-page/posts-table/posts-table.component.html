@@ -1,18 +1,24 @@
-<cdk-virtual-scroll-viewport [itemSize]="ROW_HEIGHT"
-                             class="h-[calc(100vh-200px)] overflow-y-auto custom-scrollbar shadow-sm">
-  <table class="table-auto w-full bg-white border border-gray-300">
-    <thead>
-    <tr class="bg-gray-400 text-gray-800">
-      <th class="border border-gray-300 px-4 py-2 text-center">Id</th>
-      <th class="border border-gray-300 px-4 py-2">Title</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr *cdkVirtualFor="let post of posts(); trackBy: trackByItemId"
-        class="cursor-pointer hover:bg-gray-300 transition ease-in-out delay-50">
-      <td class="border border-gray-300 py-2 text-center w-10">{{ post.id }}</td>
-      <td class="border border-gray-300 px-4 py-2">{{ post.title }}</td>
-    </tr>
-    </tbody>
-  </table>
-</cdk-virtual-scroll-viewport>
+@if (posts().length) {
+  <cdk-virtual-scroll-viewport [itemSize]="ROW_HEIGHT"
+                               class="h-[calc(100vh-200px)] overflow-y-auto custom-scrollbar shadow-sm">
+    <table class="table-auto w-full bg-white border border-gray-300">
+      <thead>
+      <tr class="bg-gray-400 text-gray-800">
+        <th class="border border-gray-300 px-4 py-2 text-center">Id</th>
+        <th class="border border-gray-300 px-4 py-2">Title</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *cdkVirtualFor="let post of posts(); trackBy: trackByItemId"
+          class="cursor-pointer hover:bg-gray-300 transition ease-in-out delay-50">
+        <td class="border border-gray-300 py-2 text-center w-10">{{ post.id }}</td>
+        <td class="border border-gray-300 px-4 py-2">{{ post.title }}</td>
+      </tr>
+      </tbody>
+    </table>
+  </cdk-virtual-scroll-viewport>
+} @else {
+  <div class="text-center mt-10">
+    <h1 class="text-2xl">No posts found</h1>
+  </div>
+}

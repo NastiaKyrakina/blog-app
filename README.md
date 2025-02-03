@@ -1,3 +1,7 @@
+Simple Angular Application with connection to Jsonplaceholder API to get list of data with search.
+Used the NGRX for state management and CDK Virtual Scroll for data-rendering.
+
+
 # BlogApp
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.6.
